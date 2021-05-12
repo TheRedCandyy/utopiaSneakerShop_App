@@ -1,0 +1,13 @@
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\utopiaSneakerShop.exe
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\utopiaSneakerShop.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\utopiaSneakerShop.deps.json
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\utopiaSneakerShop.runtimeconfig.json
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\utopiaSneakerShop.pdb
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\BouncyCastle.Crypto.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\Google.Protobuf.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\K4os.Compression.LZ4.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\K4os.Compression.LZ4.Streams.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\K4os.Hash.xxHash.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\MySql.Data.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\Ubiety.Dns.Core.dll
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop\utopiaSneakerShop\bin\Release\netcoreapp3.1\publish\Zstandard.Net.dll
