@@ -139,4 +139,16 @@
   <data name="JetBrainsMono_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\fonts\ttf\JetBrainsMono-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="JetBrainsMono_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\fonts\ttf\JetBrainsMono-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="JetBrainsMono_Italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\fonts\ttf\JetBrainsMono-Italic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="JetBrainsMono_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\fonts\ttf\JetBrainsMono-Medium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="JetBrainsMono_Regular1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\fonts\ttf\JetBrainsMono-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

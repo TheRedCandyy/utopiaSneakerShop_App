@@ -73,9 +73,49 @@ namespace utopiaSneakerShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] JetBrainsMono_Bold {
+            get {
+                object obj = ResourceManager.GetObject("JetBrainsMono_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] JetBrainsMono_Italic {
+            get {
+                object obj = ResourceManager.GetObject("JetBrainsMono_Italic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] JetBrainsMono_Medium {
+            get {
+                object obj = ResourceManager.GetObject("JetBrainsMono_Medium", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] JetBrainsMono_Regular {
             get {
                 object obj = ResourceManager.GetObject("JetBrainsMono_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] JetBrainsMono_Regular1 {
+            get {
+                object obj = ResourceManager.GetObject("JetBrainsMono_Regular1", resourceCulture);
                 return ((byte[])(obj));
             }
         }

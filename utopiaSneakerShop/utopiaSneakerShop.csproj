@@ -2,8 +2,16 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net461</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +21,22 @@
     <EmbeddedResource Remove="font\**" />
     <None Remove="fonts\**" />
     <None Remove="font\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="fonts\ttf\JetBrainsMono-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="fonts\ttf\JetBrainsMono-Medium.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="fonts\ttf\JetBrainsMono-Italic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="fonts\ttf\JetBrainsMono-Bold.ttf" />
   </ItemGroup>
 
   <ItemGroup>

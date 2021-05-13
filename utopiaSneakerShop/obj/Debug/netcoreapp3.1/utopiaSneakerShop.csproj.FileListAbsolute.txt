@@ -52,3 +52,4 @@ C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\
 C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
 C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\netcoreapp3.1\utopiaSneakerShop.csproj.CopyComplete
 C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\netcoreapp3.1\utopiaSneakerShop.genruntimeconfig.cache
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\netcoreapp3.1\utopiaSneakerShop.UserProfile.resources

@@ -69,30 +69,43 @@ namespace utopiaSneakerShop
             Cursor.Current = Cursors.Hand;
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
-            MySqlConnection con = new MySqlConnection(Form1.conString);
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM user WHERE userUsername = @username AND userPassword = @password", con);
-            cmd.Parameters.AddWithValue("@username", this.UsernameTextBox.Text);
-            cmd.Parameters.AddWithValue("@password", this.PasswordTextBox.Text);
+        private void LoginButton_Click(object sender, EventArgs e) { 
+        
+            MySqlConnection con1 = new MySqlConnection(Form1.conString);
+            MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM user WHERE userUsername = @username AND userPassword = @password", con1);
+            cmd1.Parameters.AddWithValue("@username", this.UsernameTextBox.Text);
+            cmd1.Parameters.AddWithValue("@password", this.PasswordTextBox.Text);
 
-            con.Open();
-            MySqlDataReader reader = cmd.ExecuteReader();
+            con1.Open();
+            MySqlDataReader reader = cmd1.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
+                    MySqlConnection con2 = new MySqlConnection(Form1.conString);
                     sessionUsername = reader.GetString("userUsername");
-                    this.Close();
-                    var form1 = new Form1();
-                    form1.Show();
+                    MySqlCommand cmd2 = new MySqlCommand("INSERT INTO login(loginDate, user_userUsername) VALUES (NOW(), @username)", con2);
+                    cmd2.Parameters.AddWithValue("@username", sessionUsername);
+                    try
+                    {
+                        con2.Open();
+                        cmd2.ExecuteNonQuery();
+                        con2.Close();
+                        this.Close();
+                        var form1 = new Form1();
+                        form1.Show();
+                    }
+                    catch (Exception e1)
+                    {
+                        MessageBox.Show("Error!" + e1, "An error has ocurred!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
             {
                 ErrorLabel.Visible = true;
             }
-            con.Close();
+            con1.Close();
         }
 
         private void usernameTextBox_KeyPress(object sender, KeyPressEventArgs e)
