@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FJcYlvqxtGu7OwMEM7IqzhfmJizu/Z6+llOkZaJ6w/0yk1amYGyRnwLe+OF/cNWJk4pX2DxB2rNtYXmyg0m3uw==",
+  "dgSpecHash": "o6hRbWG+73+mOF5JyQyMpW4av8vpCGTlbfYyk1L1TNkaBz0s5F5q1J/VNqH0aEvi8X9/VtzMLROYg45nCNn4Pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop\\utopiaSneakerShop\\utopiaSneakerShop.csproj",
+  "projectFilePath": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop_App\\utopiaSneakerShop\\utopiaSneakerShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexandre Tavares\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Alexandre Tavares\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

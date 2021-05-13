@@ -17,6 +17,7 @@ namespace utopiaSneakerShop
         {
             InitializeComponent();
             conString = Form1.conString;
+            this.ActiveControl = pictureBox1;
             this.UsernameTextBox.BorderStyle = BorderStyle.None;
             this.UsernameTextBox.AutoSize = false; //Allows you to change height to have bottom padding
             this.UsernameTextBox.Controls.Add(new Label()
@@ -81,7 +82,7 @@ namespace utopiaSneakerShop
             {
                 while (reader.Read())
                 {
-                    sessionUsername = reader.GetString(0);
+                    sessionUsername = reader.GetString("userUsername");
                     this.Close();
                     var form1 = new Form1();
                     form1.Show();
@@ -115,6 +116,10 @@ namespace utopiaSneakerShop
             else
             {
                 LoginButton.Enabled = false;
+            }
+            if((int)e.KeyChar == 13)
+            {
+                LoginButton.PerformClick();
             }
         }
     }

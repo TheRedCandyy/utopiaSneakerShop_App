@@ -33,8 +33,6 @@ namespace utopiaSneakerShop
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.QuitButton = new System.Windows.Forms.PictureBox();
             this.MinimizeButton = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,6 +60,7 @@ namespace utopiaSneakerShop
             this.UsernameTextBox.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UsernameTextBox.Location = new System.Drawing.Point(84, 97);
             this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.PlaceholderText = "Username";
             this.UsernameTextBox.Size = new System.Drawing.Size(144, 27);
             this.UsernameTextBox.TabIndex = 2;
             this.UsernameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usernameTextBox_KeyPress);
@@ -90,36 +89,19 @@ namespace utopiaSneakerShop
             this.MinimizeButton.TabStop = false;
             this.MinimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(114, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 19);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(114, 159);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 19);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Password";
-            // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(219)))), ((int)(((byte)(192)))));
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PasswordTextBox.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordTextBox.Location = new System.Drawing.Point(84, 181);
+            this.PasswordTextBox.Location = new System.Drawing.Point(84, 149);
+            this.PasswordTextBox.MaxLength = 14;
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
+            this.PasswordTextBox.PlaceholderText = "Password";
             this.PasswordTextBox.Size = new System.Drawing.Size(144, 27);
             this.PasswordTextBox.TabIndex = 9;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             this.PasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordTextBox_KeyPress);
             // 
             // LoginButton
@@ -129,7 +111,7 @@ namespace utopiaSneakerShop
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LoginButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LoginButton.Location = new System.Drawing.Point(114, 214);
+            this.LoginButton.Location = new System.Drawing.Point(117, 182);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(77, 27);
             this.LoginButton.TabIndex = 10;
@@ -141,7 +123,7 @@ namespace utopiaSneakerShop
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 298);
+            this.label3.Location = new System.Drawing.Point(12, 274);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(224, 14);
             this.label3.TabIndex = 12;
@@ -152,7 +134,7 @@ namespace utopiaSneakerShop
             this.RegisterLabel.AutoSize = true;
             this.RegisterLabel.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RegisterLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.RegisterLabel.Location = new System.Drawing.Point(235, 298);
+            this.RegisterLabel.Location = new System.Drawing.Point(236, 274);
             this.RegisterLabel.Name = "RegisterLabel";
             this.RegisterLabel.Size = new System.Drawing.Size(35, 14);
             this.RegisterLabel.TabIndex = 13;
@@ -167,7 +149,7 @@ namespace utopiaSneakerShop
             this.ErrorLabel.AutoSize = true;
             this.ErrorLabel.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(56, 257);
+            this.ErrorLabel.Location = new System.Drawing.Point(63, 238);
             this.ErrorLabel.Name = "ErrorLabel";
             this.ErrorLabel.Size = new System.Drawing.Size(196, 14);
             this.ErrorLabel.TabIndex = 14;
@@ -179,14 +161,12 @@ namespace utopiaSneakerShop
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(219)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(300, 321);
+            this.ClientSize = new System.Drawing.Size(300, 298);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.RegisterLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.MinimizeButton);
             this.Controls.Add(this.UsernameTextBox);
@@ -210,8 +190,6 @@ namespace utopiaSneakerShop
         private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.PictureBox QuitButton;
         private System.Windows.Forms.PictureBox MinimizeButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label label3;

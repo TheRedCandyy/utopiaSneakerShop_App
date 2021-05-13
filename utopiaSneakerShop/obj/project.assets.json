@@ -845,11 +845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop\\utopiaSneakerShop\\utopiaSneakerShop.csproj",
+      "projectUniqueName": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop_App\\utopiaSneakerShop\\utopiaSneakerShop.csproj",
       "projectName": "utopiaSneakerShop",
-      "projectPath": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop\\utopiaSneakerShop\\utopiaSneakerShop.csproj",
+      "projectPath": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop_App\\utopiaSneakerShop\\utopiaSneakerShop.csproj",
       "packagesPath": "C:\\Users\\Alexandre Tavares\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop\\utopiaSneakerShop\\obj\\",
+      "outputPath": "C:\\Users\\Alexandre Tavares\\source\\repos\\utopiaSneakerShop_App\\utopiaSneakerShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Visual Studio 2019\\Shared\\NuGetPackages"

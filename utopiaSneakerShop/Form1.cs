@@ -13,38 +13,23 @@ namespace utopiaSneakerShop
 {
     public partial class Form1 : Form
     {
-        public static String conString = "server=192.168.56.101;user id=alex;database=utopia;Password=Passw0rd_123";
+        public static String conString = "server=192.168.56.103;user id=alex;database=utopia;Password=Passw0rd_123";
         public Form1()
         {
             InitializeComponent();
+            this.ActiveControl = pictureBox1;
             if (UserLoginForm.sessionUsername.Equals(""))
             {
-                this.Hide();
-                var userForm = new UserLoginForm();
-                userForm.Show();
+                LoginButton.Text = "Login";
             }
             else
             {
                 LoginButton.Text = UserLoginForm.sessionUsername;
             }
-            /*MySqlConnection con = new MySqlConnection(Form1.conString);
+            MySqlConnection con = new MySqlConnection(Form1.conString);
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM user", con);
             con.Open();
-            MySqlDataReader ler = cmd.ExecuteReader();*/
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            if (UserLoginForm.sessionUsername.Equals(""))
-            {
-                this.Hide();
-                var userForm = new UserLoginForm();
-                userForm.Show();
-            }
-            else
-            {
-                LoginButton.Text = UserLoginForm.sessionUsername;
-            }
+            MySqlDataReader ler = cmd.ExecuteReader();
         }
 
         private void QuitButton_Click(object sender, EventArgs e)
@@ -87,7 +72,7 @@ namespace utopiaSneakerShop
             if (UserLoginForm.sessionUsername.Equals(""))
             {
                 this.Hide();
-                var userForm = new UserLoginForm(conString);
+                var userForm = new UserLoginForm();
                 userForm.Show();
             }
             else
