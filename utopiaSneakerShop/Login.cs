@@ -13,6 +13,7 @@ namespace utopiaSneakerShop
     {
         public static String conString;
         public static String sessionUsername = "";
+        public static bool isAdmin = false;
         public UserLoginForm()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace utopiaSneakerShop
             { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
 
             LoginButton.Enabled = false;
+            UsernameTextBox.Focus();
         }
 
         private void UserLoginForm_Load(object sender, EventArgs e)
@@ -83,7 +85,8 @@ namespace utopiaSneakerShop
                 while (reader.Read())
                 {
                     MySqlConnection con2 = new MySqlConnection(Form1.conString);
-                    sessionUsername = reader.GetString("userUsername");
+                    sessionUsername = reader.GetString("userUsername"); //Guardar o username numa variavel
+                    isAdmin = (reader.GetInt32("userType") == 1) ? true : false; //Se o userType for 1 o user é admin
                     MySqlCommand cmd2 = new MySqlCommand("INSERT INTO login(loginDate, user_userUsername) VALUES (NOW(), @username)", con2);
                     cmd2.Parameters.AddWithValue("@username", sessionUsername);
                     try

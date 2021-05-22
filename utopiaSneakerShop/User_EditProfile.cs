@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace utopiaSneakerShop
 {
-    public partial class UserSneaker : UserControl
+    public partial class User_EditProfile : UserControl
     {
-        public UserSneaker()
+        public User_EditProfile()
         {
             InitializeComponent();
         }

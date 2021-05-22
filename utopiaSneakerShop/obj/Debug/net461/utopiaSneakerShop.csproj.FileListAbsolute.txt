@@ -125,3 +125,11 @@ C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\
 C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.pdb
 C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.UserClothing.resources
 C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.UserSneaker.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.AdminProfile.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.NewAdmin.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.Brand.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.Model.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.Product.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.DBConnect.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.NewProduct.resources
+C:\Users\Alexandre Tavares\source\repos\utopiaSneakerShop_App\utopiaSneakerShop\obj\Debug\net461\utopiaSneakerShop.EditProduct.resources

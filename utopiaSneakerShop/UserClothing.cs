@@ -12,11 +12,9 @@ namespace utopiaSneakerShop
 {
     public partial class UserClothing : UserControl
     {
-        String con;
-        public UserClothing(string conString)
+        public UserClothing()
         {
             InitializeComponent();
-            con = conString;
         }
     }
 }

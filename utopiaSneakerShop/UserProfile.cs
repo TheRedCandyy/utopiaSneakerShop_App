@@ -10,12 +10,21 @@ namespace utopiaSneakerShop
 {
     public partial class UserProfile : UserControl
     {
-        String con;
-        public UserProfile(string conString)
+        public UserProfile()
         {
             InitializeComponent();
-            con = conString;
             menuStrip1.BackColor = Color.FromArgb(226, 219, 192);
+            WelcomeLabel.Text = "Welcome, " + UserLoginForm.sessionUsername + "!";
+        }
+
+        private void yourAddressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yourAddressToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

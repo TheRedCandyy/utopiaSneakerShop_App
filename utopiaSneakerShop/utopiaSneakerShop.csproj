@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net461</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>logo_notext.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

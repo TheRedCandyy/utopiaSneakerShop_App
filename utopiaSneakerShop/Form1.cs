@@ -15,36 +15,48 @@ namespace utopiaSneakerShop
 {
     public partial class Form1 : Form
     {
-        public static String conString = "server=192.168.56.103;user id=alex;database=utopia;Password=Passw0rd_123";
+        public static String conString = "";
         PrivateFontCollection pfc = new PrivateFontCollection();
         UserProfile u_prof;
         UserClothing u_clothing;
         UserSneaker u_sneaker;
+        AdminProfile adm_prof;
         public Form1()
         {
             InitializeComponent();
+            if (conString.Equals(""))
+            {
+                DBConnect db = new DBConnect();
+                db.ShowDialog();
+            }
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
             this.ActiveControl = pictureBox1;
-            u_prof = new UserProfile(conString);
-            u_clothing = new UserClothing(conString);
-            u_sneaker = new UserSneaker(conString);
+            u_prof = new UserProfile();
+            u_clothing = new UserClothing();
+            u_sneaker = new UserSneaker();
+            adm_prof = new AdminProfile();
             u_prof.Visible = false;
             u_clothing.Visible = false;
             u_sneaker.Visible = false;
+            adm_prof.Visible = false;
             panel1.Controls.Add(u_prof);
             panel1.Controls.Add(u_clothing);
             panel1.Controls.Add(u_sneaker);
+            panel1.Controls.Add(adm_prof);
             if (UserLoginForm.sessionUsername.Equals(""))
             {
                 LoginButton.Text = "Login";
+                LogoutButton.Visible = false;
+                LogoutButton.Enabled = false;
             }
             else
             {
+                LogoutButton.Visible = true;
+                LogoutButton.Enabled = true;
                 LoginButton.Text = UserLoginForm.sessionUsername;
             }
-            MySqlConnection con = new MySqlConnection(Form1.conString);
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM user", con);
-            con.Open();
-            MySqlDataReader ler = cmd.ExecuteReader();
         }
         private void QuitButton_Click(object sender, EventArgs e)
         {
@@ -87,6 +99,10 @@ namespace utopiaSneakerShop
         {
             HoverButton(LoginButton, true);
         }
+        private void LogoutButton_MouseEnter(object sender, EventArgs e)
+        {
+            HoverButton(LogoutButton, true);
+        }
         private void SneakersButton_MouseLeave(object sender, EventArgs e)
         {
             HoverButton(SneakersButton, false);
@@ -101,6 +117,10 @@ namespace utopiaSneakerShop
         {
             HoverButton(LoginButton, false);
         }
+        private void LogoutButton_MouseLeave(object sender, EventArgs e)
+        {
+            HoverButton(LogoutButton, false);
+        }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -112,7 +132,20 @@ namespace utopiaSneakerShop
             }
             else
             {
-                u_prof.Visible = true;
+                if (UserLoginForm.isAdmin == true)
+                {
+                    adm_prof.Visible = true;
+                    u_sneaker.Visible = false;
+                    u_clothing.Visible = false;
+                    u_prof.Visible = false;
+                }
+                else
+                {
+                    u_prof.Visible = true;
+                    adm_prof.Visible = false;
+                    u_sneaker.Visible = false;
+                    u_clothing.Visible = false;
+                }
             }
         }
 
@@ -121,6 +154,7 @@ namespace utopiaSneakerShop
             u_sneaker.Visible = true;
             u_clothing.Visible = false;
             u_prof.Visible = false;
+            adm_prof.Visible = false;
         }
 
         private void ClothingButton_Click(object sender, EventArgs e)
@@ -128,6 +162,13 @@ namespace utopiaSneakerShop
             u_sneaker.Visible = false;
             u_clothing.Visible = true;
             u_prof.Visible = false;
+            adm_prof.Visible = false;
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            UserLoginForm.sessionUsername = "";
+            Application.Restart();
         }
     }
 }

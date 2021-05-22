@@ -4,67 +4,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Text;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace utopiaSneakerShop
 {
-    public partial class UserRegisterForm : Form
+    public partial class NewAdmin : UserControl
     {
-        public static String conString;
-        public UserRegisterForm()
+        public NewAdmin()
         {
             InitializeComponent();
-            conString = Form1.conString;
-            this.ActiveControl = pictureBox1;
-
-            this.UsernameTextBox.BorderStyle = BorderStyle.None;
-            this.UsernameTextBox.AutoSize = false;
-            this.UsernameTextBox.Controls.Add(new Label()
-            { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
-            this.EmailTextBox.BorderStyle = BorderStyle.None;
-            this.EmailTextBox.AutoSize = false;
-            this.EmailTextBox.Controls.Add(new Label()
-            { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
-            this.PasswordTextBox.BorderStyle = BorderStyle.None;
-            this.PasswordTextBox.AutoSize = false;
-            this.PasswordTextBox.Controls.Add(new Label()
-            { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
-            this.ConfirmPasswordTextBox.BorderStyle = BorderStyle.None;
-            this.ConfirmPasswordTextBox.AutoSize = false;
-            this.ConfirmPasswordTextBox.Controls.Add(new Label()
-            { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
-            this.FirstNameTextBox.BorderStyle = BorderStyle.None;
-            this.FirstNameTextBox.AutoSize = false;
-            this.FirstNameTextBox.Controls.Add(new Label()
-            { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
-            this.LastNameTextBox.BorderStyle = BorderStyle.None;
-            this.LastNameTextBox.AutoSize = false;
-            this.LastNameTextBox.Controls.Add(new Label()
-            { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
-            this.NIFTextBox.BorderStyle = BorderStyle.None;
-            this.NIFTextBox.AutoSize = false;
-            this.NIFTextBox.Controls.Add(new Label()
-            { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
-
-            RegisterButton.Enabled = false;
-        }
-
-        private void quitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            var userLoginForm = new UserLoginForm();
-            userLoginForm.Show();
-        }
-
-        private void minimizeButton_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            ErrorLabel.Visible = false;
             //Verificar se a password tem mais de 3 caracteres
             if (PasswordTextBox.TextLength < 3 && ConfirmPasswordTextBox.TextLength < 3)
             {
@@ -86,7 +42,7 @@ namespace utopiaSneakerShop
                 return;
             }
             //Verificar se o NIF tem 9 caracteres
-            if(NIFTextBox.TextLength != 9)
+            if (NIFTextBox.TextLength != 9)
             {
                 ErrorLabel.Visible = true;
                 ErrorLabel.Text = "Passwords aren't equal!";
@@ -129,7 +85,7 @@ namespace utopiaSneakerShop
 
             //Finalmente inserir o utilizador
             MySqlCommand cmd3 = new MySqlCommand("INSERT INTO user(userUsername, userPassword, userEmail, userName, userSurname, userNIF, userType) " +
-            "VALUES (@username, @password, @email, @firstname, @lastname, @nif, 0)", con);
+            "VALUES (@username, @password, @email, @firstname, @lastname, @nif, 1)", con);
             cmd3.Parameters.AddWithValue("@username", this.UsernameTextBox.Text);
             cmd3.Parameters.AddWithValue("@password", this.PasswordTextBox.Text);
             cmd3.Parameters.AddWithValue("@email", this.EmailTextBox.Text);
@@ -146,9 +102,14 @@ namespace utopiaSneakerShop
                 MessageBox.Show("Error!" + e1, "An error has ocurred!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con.Close();
-            this.Close();
-            var userLoginForm = new UserLoginForm();
-            userLoginForm.Show();
+            var msgbox = MessageBox.Show("Created a new administrator with sucess!", "New Administrator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            UsernameTextBox.Text = "";
+            EmailTextBox.Text = "";
+            PasswordTextBox.Text = "";
+            ConfirmPasswordTextBox.Text = "";
+            FirstNameTextBox.Text = "";
+            LastNameTextBox.Text = "";
+            NIFTextBox.Text = "";
         }
 
         private void UsernameTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -249,5 +210,5 @@ namespace utopiaSneakerShop
                 RegisterButton.Enabled = false;
             }
         }
-    } 
+    }
 }

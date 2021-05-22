@@ -29,6 +29,7 @@ namespace utopiaSneakerShop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MinimizeButton = new System.Windows.Forms.PictureBox();
             this.QuitButton = new System.Windows.Forms.PictureBox();
@@ -36,6 +37,7 @@ namespace utopiaSneakerShop
             this.SneakersButton = new System.Windows.Forms.Button();
             this.ClothingButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.LogoutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuitButton)).BeginInit();
@@ -136,12 +138,33 @@ namespace utopiaSneakerShop
             this.LoginButton.MouseEnter += new System.EventHandler(this.LoginButton_MouseEnter);
             this.LoginButton.MouseLeave += new System.EventHandler(this.LoginButton_MouseLeave);
             // 
+            // LogoutButton
+            // 
+            this.LogoutButton.BackColor = System.Drawing.Color.Transparent;
+            this.LogoutButton.Enabled = false;
+            this.LogoutButton.FlatAppearance.BorderSize = 0;
+            this.LogoutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(85)))), ((int)(((byte)(57)))));
+            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButton.Font = new System.Drawing.Font("JetBrains Mono", 11.25F);
+            this.LogoutButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LogoutButton.Location = new System.Drawing.Point(645, -1);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(78, 30);
+            this.LogoutButton.TabIndex = 8;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = false;
+            this.LogoutButton.Visible = false;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            this.LogoutButton.MouseEnter += new System.EventHandler(this.LogoutButton_MouseEnter);
+            this.LogoutButton.MouseLeave += new System.EventHandler(this.LogoutButton_MouseLeave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(219)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(864, 465);
+            this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.ClothingButton);
             this.Controls.Add(this.SneakersButton);
@@ -150,10 +173,11 @@ namespace utopiaSneakerShop
             this.Controls.Add(this.MinimizeButton);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Utopia SneakerShop";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuitButton)).EndInit();
@@ -170,6 +194,7 @@ namespace utopiaSneakerShop
         private System.Windows.Forms.Button SneakersButton;
         private System.Windows.Forms.Button ClothingButton;
         private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Button LogoutButton;
     }
 }
 
